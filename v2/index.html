@@ -11,8 +11,7 @@
       --accent:#4F46E5;--accent-light:#EEF2FF;
       --green:#059669;--green-light:#ECFDF5;
       --red:#DC2626;--red-light:#FEF2F2;
-      --yellow:#D97706;--yellow-light:#FFFBEB;
-      --purple:#7C3AED;--purple-light:#F5F3FF;
+      --purple:#7C3AED;
       --text:#1A1A2E;--text-muted:#64748B;
       --border:#E2E8F0;--bg:#F8FAFC;--white:#FFFFFF;
       --shadow:0 4px 24px rgba(0,0,0,0.08)
@@ -26,7 +25,6 @@
     .nl a{font-size:.82rem;color:var(--text-muted);text-decoration:none;white-space:nowrap;transition:color .2s}
     .nl a:hover{color:var(--brand)}
     section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:6rem 2rem 4rem;max-width:900px;margin:0 auto}
-    /* HERO */
     .hero{max-width:100%;padding:7rem 0 4rem;background:linear-gradient(135deg,#FFF9F6 0%,#EEF2FF 100%);min-height:100vh;display:flex;flex-direction:column;justify-content:center}
     .hi{max-width:900px;margin:0 auto;padding:0 2rem;width:100%}
     .htag{display:inline-block;background:var(--brand-light);color:var(--brand);font-size:.78rem;font-weight:600;padding:.3rem .9rem;border-radius:999px;margin-bottom:1.5rem;letter-spacing:.05em}
@@ -39,34 +37,28 @@
     .sc .ic{font-size:1.5rem;margin-bottom:.4rem}
     .sc .lb{font-size:.75rem;color:var(--text-muted)}
     .sc .vl{font-size:1.2rem;font-weight:800;color:var(--text)}
-    .sc .vl-before{font-size:.78rem;color:var(--text-muted);margin-top:.2rem}
-    /* PART HEADER */
+    .sc .before{font-size:.72rem;color:var(--text-muted);margin-top:.25rem;opacity:.7}
     .ptag{font-size:.75rem;font-weight:700;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.4rem}
     .ph{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;line-height:1.25;margin-bottom:.7rem}
     .ps{font-size:.95rem;color:var(--text-muted);max-width:600px;margin-bottom:2.5rem}
-    /* CARDS */
     .card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.8rem;box-shadow:var(--shadow);margin-bottom:1.2rem}
     .ct{font-size:1rem;font-weight:700;margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
     .card p{font-size:.9rem;color:var(--text-muted);line-height:1.7}
-    /* FLOW */
     .fw{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.6rem;box-shadow:var(--shadow);margin-bottom:1.2rem}
     .flow{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center}
     .fb{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.45rem .9rem;font-size:.82rem;font-weight:500}
     .fb.hl{background:var(--brand-light);border-color:var(--brand);color:var(--brand);font-weight:700}
     .fa{color:var(--text-muted);margin:0 .1rem}
     .fn{font-size:.78rem;color:var(--text-muted);margin-top:.8rem}
-    /* IO */
     .iog{display:grid;grid-template-columns:1fr 40px 1fr;gap:1rem;align-items:start;margin-bottom:1.5rem}
     .ioc h4{font-size:.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.7rem}
-    .ii{background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:.6rem .9rem;font-size:.83rem;margin-bottom:.4rem;display:flex;align-items:center;gap:.4rem}
+    .ii{background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:.6rem .9rem;font-size:.83rem;margin-bottom:.4rem;display:flex;align-items:flex-start;gap:.4rem}
     .ioa{display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:var(--brand);padding-top:1.6rem}
-    /* PIT */
     .pit{background:var(--white);border:1px solid var(--border);border-left:4px solid var(--red);border-radius:12px;padding:1.6rem;margin-bottom:1.2rem;box-shadow:var(--shadow)}
     .pn{font-size:.7rem;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.3rem}
     .pt{font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
     .pit p{font-size:.88rem;color:var(--text-muted);line-height:1.7}
-    .ins{background:var(--green-light);border:1px solid #A7F3D0;border-radius:9px;padding:.9rem 1.1rem;margin-top:1rem;font-size:.86rem;color:var(--green);display:flex;gap:.5rem}
-    /* SPLIT */
+    .ins{background:var(--green-light);border:1px solid #A7F3D0;border-radius:9px;padding:.9rem 1.1rem;margin-top:1rem;font-size:.86rem;color:var(--green);display:flex;gap:.5rem;line-height:1.65}
     .spt{display:grid;grid-template-columns:1fr 1fr;border-radius:14px;overflow:hidden;border:1px solid var(--border);margin:1.5rem 0;box-shadow:var(--shadow)}
     .spc{padding:1.3rem}
     .spc:first-child{background:var(--accent-light);border-right:1px solid var(--border)}
@@ -77,9 +69,8 @@
     .spc ul{list-style:none}
     .spc ul li{font-size:.83rem;color:var(--text-muted);padding:.35rem 0;border-bottom:1px solid rgba(0,0,0,.05);display:flex;align-items:center;gap:.4rem}
     .spc ul li:last-child{border-bottom:none}
-    /* ROLE */
     .rg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin-top:1.5rem}
-    .rc{border-radius:12px;padding:1.4rem;position:relative;overflow:hidden;border:1.5px solid}
+    .rc{border-radius:12px;padding:1.4rem;border:1.5px solid}
     .rc.ops{background:var(--brand-light);border-color:#FFCBB8}
     .rc.rd{background:var(--accent-light);border-color:#C7D2FE}
     .rc.pm{background:var(--green-light);border-color:#A7F3D0}
@@ -96,28 +87,23 @@
     .rc.ops .rfrom{background:rgba(255,107,53,.12);color:var(--brand)}
     .rc.rd .rfrom{background:rgba(79,70,229,.1);color:var(--accent)}
     .rc.pm .rfrom{background:rgba(5,150,105,.1);color:var(--green)}
-    .rkey{font-size:.88rem;font-weight:700;padding:.5rem .7rem;border-radius:8px;background:rgba(255,255,255,.8);line-height:1.5}
-    .rc.ops .rkey{color:var(--brand)}
-    .rc.rd .rkey{color:var(--accent)}
-    .rc.pm .rkey{color:var(--green)}
-    /* PARADIGM */
+    .rto{font-size:.83rem;font-weight:600;padding:.4rem .7rem;border-radius:6px;background:rgba(255,255,255,.7);line-height:1.7}
+    .rc.ops .rto{color:var(--brand)}
+    .rc.rd .rto{color:var(--accent)}
+    .rc.pm .rto{color:var(--green)}
     .pgm{background:linear-gradient(135deg,var(--accent) 0%,#7C3AED 100%);border-radius:18px;padding:2rem;color:white;margin:1.5rem 0}
     .pgm h3{font-size:1rem;font-weight:700;opacity:.75;margin-bottom:1.2rem}
     .pgr{display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem;flex-wrap:wrap}
     .po{background:rgba(255,255,255,.1);border-radius:8px;padding:.5rem 1rem;font-size:.85rem;flex:1;text-align:center;min-width:120px}
     .pnw{background:rgba(255,255,255,.25);border-radius:8px;padding:.5rem 1rem;font-size:.85rem;font-weight:700;flex:1;text-align:center;min-width:120px}
     .par{opacity:.5;font-size:1.1rem}
-    /* QUOTE */
     .quote{border-left:4px solid var(--brand);padding:1rem 1.4rem;font-size:1.05rem;font-style:italic;background:var(--brand-light);border-radius:0 12px 12px 0;margin:1.5rem 0;line-height:1.7}
-    /* ARCH */
     .arch{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.8rem;box-shadow:var(--shadow);margin:1.2rem 0}
     .al{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:700;padding:.3rem .8rem;border-radius:999px;margin-bottom:.8rem}
     .al.bad{background:var(--red-light);color:var(--red)}
     .al.good{background:var(--green-light);color:var(--green)}
     .as{background:var(--red-light);border:2px dashed #FECACA;border-radius:10px;padding:1rem;text-align:center;font-size:.85rem;color:var(--red);margin-bottom:1.5rem}
-    .amr{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
-    .am{background:var(--green-light);border:2px solid #A7F3D0;border-radius:9px;padding:.65rem 1rem;font-size:.82rem;font-weight:700;color:var(--green);white-space:nowrap}
-    /* KB */
+    .am{background:var(--green-light);border:2px solid #A7F3D0;border-radius:9px;padding:.65rem 1rem;font-size:.82rem;font-weight:700;color:var(--green)}
     .kbg{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0}
     .kbc{border-radius:12px;padding:1.3rem;border:1px solid var(--border)}
     .kbc.uni{background:var(--accent-light);border-color:#C7D2FE}
@@ -128,18 +114,15 @@
     .kbc ul{list-style:none}
     .kbc ul li{font-size:.83rem;color:var(--text-muted);padding:.3rem 0;border-bottom:1px solid rgba(0,0,0,.05);display:flex;gap:.4rem}
     .kbc ul li:last-child{border-bottom:none}
-    /* STEP NUM */
     .sn{background:var(--accent);color:white;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0}
     .sn.g{background:var(--green)}
     .sn.b{background:var(--brand)}
-    /* CLOSING */
     .closing{background:linear-gradient(135deg,#1A1A2E 0%,#2D1B69 100%);color:white;padding:6rem 2rem;text-align:center;min-height:auto;max-width:100%}
     .cin{max-width:860px;margin:0 auto}
     .closing h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.3;margin-bottom:.8rem}
     .closing h2 span{color:var(--brand)}
     .csub{font-size:1rem;color:rgba(255,255,255,.55);margin-bottom:2.5rem}
     .cau{font-size:.82rem;color:rgba(255,255,255,.3)}
-    /* UTILS */
     .divider{height:1px;background:var(--border);margin:0}
     .mb1{margin-bottom:1rem}
     .mb2{margin-bottom:2rem}
@@ -160,6 +143,7 @@
   <div class="nb">🎯 AI 选达人</div>
   <ul class="nl">
     <li><a href="#background">背景</a></li>
+    <li><a href="#product">产品设计</a></li>
     <li><a href="#framework">框架搭建</a></li>
     <li><a href="#scale">规模化</a></li>
     <li><a href="#collaboration">协作范式</a></li>
@@ -171,20 +155,20 @@
   <div class="hi">
     <div class="htag">内部分享 · AI 探索实录 · 2026</div>
     <h1>端到端 <span>AI 选达人</span><br/>踩坑实录</h1>
-    <p class="hsub">一个 AI 员工从 0 到上线的完整踩坑过程</p>
+    <p class="hsub">一个 AI 员工从 0 到规模化上线的完整探索——框架设计、边界划定、认知升级，以及协作范式的真实变化。</p>
     <div class="hmeta">hujiayi · 渠道产品组</div>
     <div class="sgrid">
       <div class="sc">
         <div class="ic">⚡</div>
         <div class="lb">单次筛选时长</div>
         <div class="vl">&lt; 1 小时</div>
-        <div class="vl-before">之前：人工 2-3 天</div>
+        <div class="before">之前：人工 2-3 天</div>
       </div>
       <div class="sc">
         <div class="ic">👥</div>
         <div class="lb">单批覆盖达人数</div>
         <div class="vl">100+</div>
-        <div class="vl-before">全量覆盖，无遗漏</div>
+        <div class="before">全量覆盖，无遗漏</div>
       </div>
       <div class="sc">
         <div class="ic">🎯</div>
@@ -206,68 +190,66 @@
 <section id="product">
   <div class="ptag">Part 01</div>
   <h2 class="ph">这是一个什么产品？</h2>
-  <p class="ps">内容营销链路中，AI 介入的精准切点。</p>
+  <p class="ps">内容营销的完整链路，以及 AI 介入的精准切点。</p>
 
-  <!-- 流程图 -->
   <div class="fw mb2">
     <div class="ct mb1">📋 内容营销作业流程</div>
     <div class="flow">
-      <div class="fb">业务提需</div>
-      <div class="fa">→</div>
-      <div class="fb">运营出内容策略</div>
-      <div class="fa">→</div>
-      <div class="fb">代理提报达人名单</div>
-      <div class="fa">→</div>
-      <div class="fb hl">运营筛选达人 🎯</div>
-      <div class="fa">→</div>
-      <div class="fb">代理沟通达人</div>
-      <div class="fa">→</div>
-      <div class="fb">内容产出</div>
-      <div class="fa">→</div>
+      <div class="fb">业务提需</div><div class="fa">→</div>
+      <div class="fb">运营出内容策略</div><div class="fa">→</div>
+      <div class="fb">代理提报达人名单</div><div class="fa">→</div>
+      <div class="fb hl">运营筛选达人 🎯</div><div class="fa">→</div>
+      <div class="fb">代理沟通达人</div><div class="fa">→</div>
+      <div class="fb">内容产出</div><div class="fa">→</div>
       <div class="fb">投流</div>
     </div>
-    <div class="fn" style="margin-top:.8rem">🎯 AI 替代的就是这个环节——<strong>信息密集、需要多维判断，是 AI 最擅长的场景</strong></div>
+    <div class="fn" style="margin-top:.8rem">🎯 AI 替代的就是这个环节：<strong>「运营筛选达人」</strong>——信息密集、需要多维判断，是 AI 最擅长的场景</div>
   </div>
 
-  <!-- AI价值：三点压缩为标签行 -->
   <div class="card mb2">
-    <div class="ct">✨ 运营获得了什么？</div>
-    <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.4rem">
-      <div style="background:var(--brand-light);border-radius:8px;padding:.5rem 1rem;font-size:.85rem;font-weight:700;color:var(--brand)">🙌 完全解放人力</div>
-      <div style="background:var(--accent-light);border-radius:8px;padding:.5rem 1rem;font-size:.85rem;font-weight:700;color:var(--accent)">🔍 全面不遗漏</div>
-      <div style="background:var(--green-light);border-radius:8px;padding:.5rem 1rem;font-size:.85rem;font-weight:700;color:var(--green)">📋 判断有据可查</div>
+    <div class="ct">✨ AI 介入后，运营获得了什么？</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:.5rem">
+      <div style="background:var(--brand-light);border-radius:12px;padding:1.1rem;text-align:center">
+        <div style="font-size:1.6rem;margin-bottom:.4rem">🙌</div>
+        <div style="font-size:.85rem;font-weight:700;color:var(--brand);margin-bottom:.3rem">完全解放人力</div>
+        <div style="font-size:.78rem;color:var(--text-muted)">运营从「执行筛选」变成「定义标准」</div>
+      </div>
+      <div style="background:var(--accent-light);border-radius:12px;padding:1.1rem;text-align:center">
+        <div style="font-size:1.6rem;margin-bottom:.4rem">🔍</div>
+        <div style="font-size:.85rem;font-weight:700;color:var(--accent);margin-bottom:.3rem">全面不遗漏</div>
+        <div style="font-size:.78rem;color:var(--text-muted)">每个达人都按同等标准完整评估</div>
+      </div>
+      <div style="background:var(--green-light);border-radius:12px;padding:1.1rem;text-align:center">
+        <div style="font-size:1.6rem;margin-bottom:.4rem">📋</div>
+        <div style="font-size:.85rem;font-weight:700;color:var(--green);margin-bottom:.3rem">判断有据可查</div>
+        <div style="font-size:.78rem;color:var(--text-muted)">每个结果都有评分和理由，可追溯复盘</div>
+      </div>
     </div>
   </div>
 
-  <!-- 输入输出 -->
   <div class="iog mb2">
     <div class="ioc">
       <h4>📥 输入</h4>
-      <div class="ii">📄 内容营销策略</div>
-      <div class="ii">📊 代理提报达人名单</div>
-      <div class="ii">✏️ 运营特殊筛选要求</div>
+      <div class="ii">📄 内容营销策略（内容方向要求）</div>
+      <div class="ii">📊 代理提报表（达人候选名单）</div>
+      <div class="ii">✏️ 运营手动输入的特殊筛选要求</div>
     </div>
     <div class="ioa">→</div>
     <div class="ioc">
       <h4>📤 输出</h4>
-      <div class="ii">📋 达人筛选结果</div>
-      <div style="font-size:.8rem;color:var(--text-muted);padding:.4rem .5rem;line-height:1.7">通过/淘汰 · 匹配度评分 · 判断理由<br/>按评分倒序排列</div>
+      <div class="ii">📋 一份达人筛选结果</div>
+      <div style="font-size:.8rem;color:var(--text-muted);padding:.4rem .5rem;line-height:1.7">通过/淘汰判断 · 匹配度评分 · 判断理由<br/>按评分倒序排列</div>
     </div>
   </div>
 
-  <!-- 四步逻辑：只留标题 -->
   <div class="card">
-    <div class="ct">🔄 AI 四步处理逻辑</div>
-    <div style="display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;margin-top:.4rem">
-      <div style="background:var(--accent-light);border:1px solid #C7D2FE;border-radius:8px;padding:.45rem .9rem;font-size:.85rem;font-weight:600;color:var(--accent)"><span style="opacity:.5;margin-right:.3rem">①</span>整合规则</div>
-      <div style="color:var(--text-muted)">→</div>
-      <div style="background:var(--accent-light);border:1px solid #C7D2FE;border-radius:8px;padding:.45rem .9rem;font-size:.85rem;font-weight:600;color:var(--accent)"><span style="opacity:.5;margin-right:.3rem">②</span>获取数据</div>
-      <div style="color:var(--text-muted)">→</div>
-      <div style="background:var(--accent-light);border:1px solid #C7D2FE;border-radius:8px;padding:.45rem .9rem;font-size:.85rem;font-weight:600;color:var(--accent)"><span style="opacity:.5;margin-right:.3rem">③</span>理解内容</div>
-      <div style="color:var(--text-muted)">→</div>
-      <div style="background:var(--brand-light);border:1px solid #FDBA74;border-radius:8px;padding:.45rem .9rem;font-size:.85rem;font-weight:700;color:var(--brand)"><span style="opacity:.5;margin-right:.3rem">④</span>综合评判</div>
+    <div class="ct">🔄 AI 的四步处理逻辑</div>
+    <div style="display:flex;flex-direction:column;gap:.7rem;margin-top:.4rem">
+      <div class="ii"><span class="sn">1</span><span><strong>整合筛选规则</strong>：从三路输入中提取并整合为一份完整的筛选规则</span></div>
+      <div class="ii"><span class="sn">2</span><span><strong>获取达人数据</strong>：抓取平台核心数据（粉丝量、互动率等）及近期作品</span></div>
+      <div class="ii"><span class="sn">3</span><span><strong>理解内容方向</strong>：分析达人发布作品的风格、调性等软性指标</span></div>
+      <div class="ii"><span class="sn">4</span><span><strong>综合评判匹配度</strong>：基于完整信息做多维度判断——<strong>不是规则过滤，是基于理解的判断</strong></span></div>
     </div>
-    <div style="font-size:.8rem;color:var(--text-muted);margin-top:.8rem">第④步是核心——<strong>不是规则过滤，是基于理解的判断</strong></div>
   </div>
 </section>
 
@@ -279,50 +261,50 @@
   <h2 class="ph">产品框架搭建</h2>
   <p class="ps">框架怎么定、边界怎么划、踩了哪些坑。</p>
 
-  <!-- 2-A -->
   <div class="card mb2" style="border-top:3px solid var(--accent)">
-    <div class="ct" style="color:var(--accent)">2-A &nbsp;框架怎么确定？</div>
-    <p style="margin-bottom:1rem">不是先设计，而是<strong>先把任务直接丢给 AI，让它自由跑</strong>——反复跑了多次，每次涌现出的流程几乎一致，和运营实际作业逻辑高度吻合，这才固化为框架。</p>
-    <div class="ins">💡 <strong>方法论：AI 是很好的工作流探索工具。</strong> 让它先跑，再用人的经验验证固化——不是纯粹靠主观设计。</div>
+    <div class="ct" style="color:var(--accent)">2-A &nbsp;框架是怎么确定的？</div>
+    <p style="margin-bottom:1rem">设计 AI 工作流有一个常见误区：<strong>直接照搬人的工作方式</strong>。但人的工作流就一定是最优解吗？不一定。</p>
+    <p style="margin-bottom:1.2rem">我们的做法：<strong>先把任务直接丢给 AI，让它自由跑</strong>——反复跑了多次，发现每次涌现出的流程几乎一致，和运营实际的作业逻辑高度吻合，进一步印证了这套框架的合理性。</p>
+    <div class="ins">💡 <span><strong>方法论：AI 本身是很好的工作流探索工具。</strong> 先让它自由跑，再结合人工经验验证和固化——这样定下来的框架，既有 AI 的自然逻辑，又有人的业务经验背书，而不是纯粹靠主观设计。</span></div>
   </div>
 
-  <!-- 2-B -->
   <div class="card mb2" style="border-top:3px solid var(--brand)">
-    <div class="ct" style="color:var(--brand)">2-B &nbsp;边界怎么划？</div>
-    <p style="margin-bottom:1.2rem">先全部用 AI 跑一遍，再看哪些环节<strong>又慢又不稳定</strong>——那就是该换成代码的地方。<br/>「获取达人数据」就是典型：让 AI 模拟点击抓数据，一会超时一会漏抓，这根本不是 AI 该做的事。</p>
+    <div class="ct" style="color:var(--brand)">2-B &nbsp;找到边界：哪些该交给 AI，哪些该交给代码</div>
+    <p style="margin-bottom:1.2rem">我们的方法：<strong>先全部用 AI 跑一遍，再看哪些环节又慢又不稳定</strong>——这些就是需要工程化替代的候选。「获取达人数据」就是典型：让 AI 模拟点击去抓数据，一会超时一会漏抓——这根本不是 AI 该做的事。</p>
     <div class="spt">
       <div class="spc">
-        <h4>🤖 AI 做</h4>
+        <h4>🤖 适合 AI 做</h4>
         <ul>
-          <li>🎨 理解、判断、归纳</li>
-          <li>🔍 风格、调性等软性评估</li>
+          <li>🎨 理解、判断、归纳、生成</li>
+          <li>🔍 软性指标评估（风格、调性）</li>
           <li>⚖️ 多维度综合决策</li>
+          <li>📝 处理模糊和复杂的判断</li>
         </ul>
       </div>
       <div class="spc">
-        <h4>⚙️ 代码做</h4>
+        <h4>⚙️ 适合代码做</h4>
         <ul>
-          <li>📡 精密重复、稳定抓取</li>
+          <li>📡 精密重复操作、稳定抓取</li>
+          <li>🗄 结构化数据处理</li>
           <li>🔧 接口调用、格式转换</li>
           <li>📋 规则明确的过滤逻辑</li>
         </ul>
       </div>
     </div>
-    <div class="ins">💡 <strong>判断标准：AI 是在「做」，还是在「假装做」？</strong> 如果是后者，换成代码。</div>
+    <div class="ins">💡 <span><strong>核心判断标准：AI 在「做」这件事，还是在「假装做」？</strong> 如果是后者，换成代码。不要为了「全 AI」而强迫 AI 做它不擅长的事。</span></div>
   </div>
 
-  <!-- 2-C 踩坑 -->
   <div style="font-size:.78rem;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem">2-C &nbsp; 踩坑实录</div>
 
   <div class="pit">
     <div class="pn">坑 #1</div>
     <div class="pt">📋 只给 AI「结论」，没给它「思维过程」</div>
-    <p>只告诉 AI 结论：报价 ≤5000、CC ≥X……结果 AI 变成了硬规则过滤器，有一条不达标就直接 pass。</p>
+    <p>一开始只告诉 AI 结论：报价 ≤5000 元、CC ≥X……结果 AI 变成了硬规则过滤器，只要有一条不达标就直接 pass，完全不像人在判断。</p>
     <br/>
-    <p><strong>真实案例：</strong>达人报价 6000 超预算，AI 直接淘汰。但运营实际会再看——内容方向匹配、阅读单价低，这种大概率还是会选。</p>
+    <p><strong>典型案例：</strong>达人报价 6000，超了预算，AI 直接淘汰。但运营实际会再看一眼——内容方向很匹配、阅读单价其实很低，这种达人大概率还是会选。</p>
     <br/>
-    <p><strong>转机：</strong>把判断逻辑讲给 AI——「评估断更，核心是看流量是否稳定，而不是卡间隔天数。」AI 立刻从规则过滤切换成了真正的判断。</p>
-    <div class="ins">💡 <strong>培养 AI 的「审美」，不是配置规则。</strong> 告诉它判断逻辑，它才能举一反三；只告诉结论，它只会过滤。</div>
+    <p><strong>转机：</strong>把人的思维过程讲给 AI——「评估断更，核心是看流量是否稳定。断更导致流量下滑才是问题；如果间隔虽长但数据平稳，说明流量没受影响，达人仍然可用。」AI 立刻从「卡间隔天数」切换成了「评估流量稳定性」，判断逻辑发生了根本性变化。</p>
+    <div class="ins">💡 <span><strong>认知升级：培养 AI 的「审美」，不是配置规则。</strong> 告诉 AI 结果层面的要求，它只会过滤；告诉它背后的判断逻辑，它才能真正学会思考。</span></div>
   </div>
 
   <div class="pgm">
@@ -337,30 +319,30 @@
       <div class="par">→</div>
       <div class="pnw">✨ 理解了逻辑，能处理没见过的新情况</div>
     </div>
-    <div style="margin-top:1.2rem;font-size:.85rem;opacity:.8">💬 对产品人的新要求：能把隐性的判断逻辑显性化——说清楚「<strong>我为什么这样判断</strong>」，不只是「我的结论是什么」</div>
+    <div style="margin-top:1.2rem;font-size:.85rem;opacity:.8">💬 对产品人的新要求：能把自己脑子里<strong>隐性的判断逻辑显性化</strong>——说清楚「我为什么这样判断」，而不只是「我的结论是什么」</div>
   </div>
 
   <div class="pit">
     <div class="pn">坑 #2</div>
     <div class="pt">🔄 让同一个 Agent 又执行又自检</div>
-    <p>让 AI 按 1→2→3→4 步执行，每步还要自检。结果 AI 经常「偷懒」——执行走过场，检查也走过场。</p>
+    <p>一开始给 AI 配了一个大的处理流程，让它按 1→2→3→4 步依次执行，每步完成后还要对着检查清单自检。结果 AI 经常「偷懒」——不按要求执行，检查也是走过场，假装检查了一遍。</p>
     <br/>
-    <p><strong>解法：</strong>专门设一个<strong>主 Agent 负责监督调度</strong>，每一步单独唤起<strong>子 Agent 执行</strong>。监督的只管监督，执行的只管执行。</p>
+    <p>后来重新设计：专门设一个<strong>主 Agent 负责监督和调度</strong>，每一步单独唤起一个<strong>子 Agent 来执行</strong>。监督的只管监督，执行的只管执行，效果大幅提升。</p>
     <div class="arch">
-      <div class="al bad">❌ 之前：一个 Agent 包揽所有</div>
-      <div class="as">整合规则 → 获取数据 → 分析内容 → 判断 → 自检<br/><small>上下文越来越长，注意力分散，执行和检查都走过场</small></div>
-      <div class="al good">✅ 改进后：主控 + 子 Agent 各司其职</div>
+      <div class="al bad">❌ 之前：一个 Agent 包揽所有步骤</div>
+      <div class="as">一个大处理流程：整合规则 → 获取数据 → 分析内容 → 判断匹配度 → 自检<br/><small>上下文越来越长，AI 注意力分散，执行和检查都在走过场</small></div>
+      <div class="al good">✅ 改进后：主控在上，子 Agent 在下各司其职</div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem">
         <div class="am" style="width:100%;text-align:center">🎯 主 Agent（监督 · 调度 · 检查）</div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;width:100%">
-          <div style="background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:.5rem .6rem;font-size:.76rem;color:var(--text-muted);text-align:center">📋 子①<br/><strong style="color:var(--text)">整合规则</strong></div>
-          <div style="background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:.5rem .6rem;font-size:.76rem;color:var(--text-muted);text-align:center">📡 子②<br/><strong style="color:var(--text)">数据获取</strong></div>
-          <div style="background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:.5rem .6rem;font-size:.76rem;color:var(--text-muted);text-align:center">🎨 子③<br/><strong style="color:var(--text)">内容理解</strong></div>
-          <div style="background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:.5rem .6rem;font-size:.76rem;color:var(--text-muted);text-align:center">⚖️ 子④<br/><strong style="color:var(--text)">匹配判断</strong></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;width:100%;margin-top:.2rem">
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:.5rem .6rem;font-size:.76rem;color:var(--text-muted);text-align:center">📋 子 Agent①<br/><strong style="color:var(--text)">整合规则</strong></div>
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:.5rem .6rem;font-size:.76rem;color:var(--text-muted);text-align:center">📡 子 Agent②<br/><strong style="color:var(--text)">数据获取</strong></div>
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:.5rem .6rem;font-size:.76rem;color:var(--text-muted);text-align:center">🎨 子 Agent③<br/><strong style="color:var(--text)">内容理解</strong></div>
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:.5rem .6rem;font-size:.76rem;color:var(--text-muted);text-align:center">⚖️ 子 Agent④<br/><strong style="color:var(--text)">匹配判断</strong></div>
         </div>
       </div>
     </div>
-    <div class="ins">💡 <strong>AI 的注意力是有限资源，架构设计要管理它。</strong> 职责分离之后，每个 Agent 上下文干净、只关注一件事，整体质量自然就上来了。</div>
+    <div class="ins">💡 <span><strong>认知升级：AI 的注意力是有限资源，架构设计要管理它。</strong> 跟管人是同一个道理——让一个人同时负责执行和检查，很难做到真正严格。职责分离之后，每个 Agent 上下文干净、只需关注一件事，整体质量自然就上来了。</span></div>
   </div>
 </section>
 
@@ -372,14 +354,13 @@
   <h2 class="ph">1 → 100：规模化落地</h2>
   <p class="ps">从单次跑通到面向全业务稳定运行，要过的几道关。</p>
 
-  <!-- 总述三大挑战 -->
   <div class="card mb2" style="background:linear-gradient(135deg,#1A1A2E,#2D1B69);color:white;border:none">
     <div style="font-size:.78rem;font-weight:700;opacity:.5;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem">1 和 100 之间，差了三件事</div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
       <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:1rem;text-align:center">
         <div style="font-size:1.4rem;margin-bottom:.4rem">🏗</div>
         <div style="font-size:.85rem;font-weight:700;margin-bottom:.3rem">稳定规模执行</div>
-        <div style="font-size:.75rem;opacity:.6">偶尔能跑 → 稳定线上运行</div>
+        <div style="font-size:.75rem;opacity:.6">从偶尔能跑，到稳定线上运行</div>
       </div>
       <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:1rem;text-align:center">
         <div style="font-size:1.4rem;margin-bottom:.4rem">⚡</div>
@@ -395,33 +376,49 @@
   </div>
 
   <div class="card mb2">
-    <div class="ct">🏗 稳定规模执行：AI 的工作脚手架</div>
-    <p>本地跑通一次 ≠ 稳定上线。研发需要在 AI 背后搭一套脚手架：<strong>入口触发 → 调度管理 → 结果输出</strong>。这是 AI 从「实验品」变成「生产工具」的关键一步。</p>
+    <div class="ct">🏗 稳定规模执行：研发搭好 AI 的工作脚手架</div>
+    <p style="margin-bottom:1rem">让 AI 在本地跑通一次，和让它作为一个真正的「员工」稳定上线，是两件完全不同的事。</p>
+    <p>研发需要在 AI 背后搭一套完整的脚手架：<strong>有入口触发它去工作、有调度系统统一管理任务、结果能稳定输出到指定位置</strong>——是 AI 从「实验品」变成「生产工具」的关键一步。</p>
   </div>
 
   <div class="card mb2">
-    <div class="ct">⚡ 时效性：为每个达人开独立「工位」</div>
-    <p style="margin-bottom:1rem">串行分析 100 个达人——排队等、越往后上下文越混乱、质量越来越差。</p>
+    <div class="ct">⚡ 时效性：为每个达人开独立「工位」并行处理</div>
+    <p style="margin-bottom:1rem">一开始让 AI 串行分析达人——100 个排队等，速度很慢；越往后上下文越长越混乱，分析质量越来越差。</p>
+    <p style="margin-bottom:1rem">解决方案：为<strong>每个达人单独开一个独立的子 Agent 处理单元</strong>，并行同时跑。每个子 Agent 只包含当前这个达人的信息，上下文干净、互不干扰。</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.5rem">
       <div style="background:var(--red-light);border-radius:10px;padding:1rem">
-        <div style="font-size:.75rem;font-weight:700;color:var(--red);margin-bottom:.6rem">❌ 串行排队</div>
-        <div style="font-size:.83rem;color:var(--text-muted)">达人① → 达人② → 达人③…<br/>慢、且越来越乱</div>
+        <div style="font-size:.75rem;font-weight:700;color:var(--red);margin-bottom:.6rem">❌ 之前：串行排队</div>
+        <div style="display:flex;align-items:center;gap:.3rem;flex-wrap:wrap">
+          <div style="background:white;border:1px solid #FECACA;border-radius:6px;padding:.3rem .5rem;font-size:.75rem">达人①</div>
+          <div style="font-size:.8rem;color:var(--red)">→</div>
+          <div style="background:white;border:1px solid #FECACA;border-radius:6px;padding:.3rem .5rem;font-size:.75rem">达人②</div>
+          <div style="font-size:.8rem;color:var(--red)">→</div>
+          <div style="background:white;border:1px solid #FECACA;border-radius:6px;padding:.3rem .5rem;font-size:.75rem">达人③…</div>
+        </div>
+        <div style="font-size:.75rem;color:var(--text-muted);margin-top:.5rem">慢、且越来越乱</div>
       </div>
       <div style="background:var(--green-light);border-radius:10px;padding:1rem">
-        <div style="font-size:.75rem;font-weight:700;color:var(--green);margin-bottom:.6rem">✅ 并行独立工位</div>
-        <div style="font-size:.83rem;color:var(--text-muted)">每个达人独立处理单元<br/>上下文干净，互不干扰</div>
+        <div style="font-size:.75rem;font-weight:700;color:var(--green);margin-bottom:.6rem">✅ 改进后：子 Agent 并行独立工位</div>
+        <div style="display:flex;flex-direction:column;gap:.25rem">
+          <div style="background:white;border:1px solid #A7F3D0;border-radius:6px;padding:.3rem .6rem;font-size:.75rem;display:flex;align-items:center;gap:.4rem"><span style="color:var(--green)">●</span> 子 Agent① → 达人A</div>
+          <div style="background:white;border:1px solid #A7F3D0;border-radius:6px;padding:.3rem .6rem;font-size:.75rem;display:flex;align-items:center;gap:.4rem"><span style="color:var(--green)">●</span> 子 Agent② → 达人B</div>
+          <div style="background:white;border:1px solid #A7F3D0;border-radius:6px;padding:.3rem .6rem;font-size:.75rem;display:flex;align-items:center;gap:.4rem"><span style="color:var(--green)">●</span> 子 Agent③ → 达人C…</div>
+        </div>
+        <div style="font-size:.75rem;color:var(--text-muted);margin-top:.5rem">同步进行，互不干扰</div>
       </div>
     </div>
   </div>
 
   <div class="card mb2" style="border-top:3px solid var(--green)">
     <div class="ct" style="color:var(--green)">🌐 跨业务通用性：通用框架 + 知识库个性化</div>
-    <p style="margin-bottom:1.2rem">每个业务选达人的标准不同——美食和旅行完全两套逻辑。解法：<strong>框架通用，知识库个性化</strong>。来新业务不用重新搭，只需维护知识库，运营直接往里输入经验。</p>
+    <p style="margin-bottom:1.2rem">这个 AI 员工面向的是<strong>全业务</strong>，不是某一个业务的专属工具。但每个业务在选达人时，都有自己的特殊要求——美食业务和旅行业务的达人标准完全不同。</p>
+    <p style="margin-bottom:1.2rem"><strong>解决思路：框架通用，知识库个性化。</strong>来一个新业务，不用重新搭产品，只需要维护一个知识库。运营同学可以直接往知识库里输入经验，门槛低、维护简单。</p>
     <div class="kbg">
       <div class="kbc uni">
-        <h4>🏗 通用框架层（固定）</h4>
+        <h4>🏗 通用框架层（固定不变）</h4>
         <ul>
           <li>✓ 四步处理流程</li>
+          <li>✓ 模块拆分逻辑</li>
           <li>✓ 判断方式和评分机制</li>
           <li>✓ 输入 / 输出格式规范</li>
         </ul>
@@ -429,31 +426,33 @@
       <div class="kbc cus">
         <h4>📚 知识库层（按业务定制）</h4>
         <ul>
-          <li>✓ 业务特殊筛选标准</li>
+          <li>✓ 该业务的特殊筛选标准</li>
           <li>✓ 历史选人经验和案例</li>
+          <li>✓ 业务个性化的数据要求</li>
           <li>✓ 运营可随时补充维护</li>
         </ul>
       </div>
     </div>
-    <div class="ins">💡 <strong>目标状态：调优只改知识库，不动代码</strong>——调优权真正交到懂业务的产运手里。</div>
+    <div class="ins">💡 <span><strong>目标状态：调优只需改知识库，不需要动任何代码</strong>——调优权真正交到懂业务的产运手里，知识库本身就是业务经验的沉淀载体。</span></div>
   </div>
 
   <div class="card mb2" style="border-left:4px solid var(--accent);background:linear-gradient(to right,var(--accent-light),var(--white))">
     <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.8rem">
       <div style="background:var(--accent);color:white;border-radius:8px;padding:.3rem .7rem;font-size:.75rem;font-weight:700">核心挑战</div>
-      <div class="ct" style="color:var(--accent);margin-bottom:0">🔧 友好型框架：还没做到</div>
+      <div class="ct" style="color:var(--accent);margin-bottom:0">🔧 友好型框架：研发的关键任务</div>
     </div>
+    <p style="margin-bottom:1rem">目标清晰，但现实还有一段距离。<strong>现在的框架设计，修改筛选规则时仍然需要改动脚本代码</strong>——产运同学无法独立完成调优，每次迭代都要拉上研发。</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
       <div style="background:var(--red-light);border-radius:10px;padding:1rem">
         <div style="font-size:.75rem;font-weight:700;color:var(--red);margin-bottom:.5rem">❌ 现状</div>
-        <div style="font-size:.83rem;color:var(--text-muted)">改规则 → 改脚本代码 → 依赖研发 → 迭代慢</div>
+        <div style="font-size:.83rem;color:var(--text-muted)">规则改动 → 需要同步改多处脚本 → 依赖研发介入 → 迭代慢、容易出错</div>
       </div>
       <div style="background:var(--green-light);border-radius:10px;padding:1rem">
         <div style="font-size:.75rem;font-weight:700;color:var(--green);margin-bottom:.5rem">✅ 理想状态</div>
-        <div style="font-size:.83rem;color:var(--text-muted)">改规则 → 只改知识库 → 产运独立完成</div>
+        <div style="font-size:.83rem;color:var(--text-muted)">规则改动 → 只改知识库 → 产运独立完成 → 研发不介入</div>
       </div>
     </div>
-    <div class="ins">💡 <strong>AI 时代，研发最重要的产出之一是「友好型框架」</strong>——让不懂代码的产运能独立调优。研发从「功能实现者」升级为「赋能者」。</div>
+    <div class="ins">💡 <span>AI 时代，研发最重要的产出之一是「<strong>友好型框架</strong>」——让不懂代码的产运能独立完成效果调优。这是规模化落地的关键基建，也是研发从「功能实现者」升级为「赋能者」的体现。</span></div>
   </div>
 </section>
 
@@ -463,9 +462,8 @@
 <section id="collaboration">
   <div class="ptag">Part 04</div>
   <h2 class="ph">AI 时代，产运研协作范式变了什么？</h2>
-  <p class="ps">不只是工具变了——每个角色的定位、协作结构都在重新定义。</p>
+  <p class="ps">不只是工具变了——每个角色的定位、协作结构、能力要求都在重新定义。</p>
 
-  <!-- 4-A 定位变了 -->
   <div class="card mb2" style="border-top:3px solid var(--brand)">
     <div class="ct" style="color:var(--brand)">4-A &nbsp;定位变了</div>
     <div class="rg" style="margin-top:.5rem">
@@ -475,15 +473,17 @@
         <div class="rn">AI 的业务老师<br/>+ 质量评审员</div>
         <div class="rfrom">过去：执行筛选，按规则操作</div>
         <div style="font-size:1rem;margin:.4rem 0;opacity:.3">↓</div>
-        <div class="rkey">迭代知识库 = 调教 AI<br/>对结果做最终评审与验收</div>
+        <div class="rto">① 把经验显性化，持续输入知识库<br/>② 迭代知识库，实质上是在调教 AI<br/>③ 对 AI 结果做最终评审与验收</div>
+        <div style="font-size:.78rem;color:var(--text-muted);margin-top:.8rem;line-height:1.6">只有懂业务的人才能判断 AI 选得对不对——运营是 AI 进入业务场景的最后一道质量把关。</div>
       </div>
       <div class="rc rd">
         <div class="ri">🏗</div>
         <div class="rbg">研发</div>
-        <div class="rn">AI 基础设施建设者</div>
-        <div class="rfrom">过去：写功能代码</div>
+        <div class="rn">从功能实现者<br/>到 AI 基础设施建设者</div>
+        <div class="rfrom">过去：写专业人员能用的代码</div>
         <div style="font-size:1rem;margin:.4rem 0;opacity:.3">↓</div>
-        <div class="rkey">搭脚手架 · 封装 tool<br/>构建友好型框架</div>
+        <div class="rto">① 封装底层 tool，工程化精确重复操作<br/>② 搭线上架构，让 AI 从实验品变生产工具<br/>③ 构建友好型框架，让产运能独立调优</div>
+        <div style="font-size:.78rem;color:var(--text-muted);margin-top:.8rem;line-height:1.6">既要让 AI 能稳定跑起来，也要让业务同学能真正用起来——要求更高了。</div>
       </div>
       <div class="rc pm">
         <div class="ri">🎯</div>
@@ -491,15 +491,15 @@
         <div class="rn">AI 工作流设计师<br/>+ 效果诊断师</div>
         <div class="rfrom">过去：写需求 → 研发实现</div>
         <div style="font-size:1rem;margin:.4rem 0;opacity:.3">↓</div>
-        <div class="rkey">设计 AI 怎么干活<br/>定义人机边界 · 诊断效果</div>
+        <div class="rto">① 设计 skill：AI 怎么干活、拆几步、怎么串联<br/>② 定义人机边界：哪些交 AI、哪些留人<br/>③ 把业务判断逻辑结构化，翻译成 AI 能理解的语言<br/>④ 诊断 AI 效果，找到改进方向</div>
+        <div style="font-size:.78rem;color:var(--text-muted);margin-top:.8rem;line-height:1.6">不只是写需求，而是设计 AI 怎么工作——产品是 AI 工作方式的架构师。</div>
       </div>
     </div>
   </div>
 
-  <!-- 4-B 协作结构变了 -->
   <div class="card mb2" style="border-top:3px solid var(--accent)">
     <div class="ct" style="color:var(--accent)">4-B &nbsp;协作结构变了</div>
-    <p style="margin-bottom:1.4rem">过去：线性串行（产品写需求 → 研发实现 → 运营使用）<br/>现在：研发是<strong>底层底座</strong>，搭好后退幕后；产运在上面<strong>持续快速迭代</strong></p>
+    <p style="margin-bottom:1.4rem">过去：线性串行（产品写需求 → 研发实现 → 运营使用）。<br/>现在：研发是<strong>底层底座</strong>，搭好框架后退到幕后；产运在上面<strong>持续快速迭代</strong>。</p>
     <div style="max-width:480px;margin:0 auto 1.2rem">
       <svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
         <defs>
@@ -523,21 +523,29 @@
         <text x="240" y="222" text-anchor="middle" font-size="10" fill="#4F46E5" font-family="-apple-system,sans-serif" opacity=".8">底层 tool · 线上架构 · 友好型框架</text>
       </svg>
     </div>
-    <div class="ins">💡 <strong>改一下知识库，下次跑就不一样了</strong>——迭代主动权交到了离业务最近的人手里。</div>
+    <div class="ins">💡 <span><strong>核心变化：</strong>研发搭好框架后退到幕后，产运在上面快速循环——<strong>改一下知识库，下次跑就不一样了</strong>。迭代主动权交到了离业务最近的人手里。</span></div>
   </div>
 
-  <!-- 结语 -->
+  <div class="card mb2" style="border-top:3px solid var(--green)">
+    <div class="ct" style="color:var(--green)">4-C &nbsp;能力要求变了</div>
+    <p style="margin-bottom:1rem">AI 时代，不是只有产品需要会用 AI。每个角色都面临「如何与 AI 高效协作」的新要求。</p>
+    <div style="display:flex;flex-direction:column;gap:.7rem">
+      <div class="ii"><span class="sn b">运</span><span><strong>运营</strong>：把多年积累的业务经验显性化、结构化，持续输入并迭代知识库——你不只是在「用 AI」，是在「训练 AI」。</span></div>
+      <div class="ii"><span class="sn">研</span><span><strong>研发</strong>：从「功能实现者」到「AI 基础设施建设者」——封装底层 tool、搭稳线上架构、构建友好型框架，让 AI 既能稳定跑起来，也让业务同学能真正用起来。</span></div>
+      <div class="ii"><span class="sn g">产</span><span><strong>产品</strong>：设计 skill、定义人机边界、把业务判断逻辑结构化翻译成 AI 语言——产品是 AI 工作方式的架构师，也是效果的诊断师。</span></div>
+    </div>
+  </div>
+
   <div class="quote">
     不是 AI 替代人，而是每个人都在学会管理 AI。<br/>
-    运营训练 AI · 研发支撑 AI · 产品设计 AI——各司其职，一起把 AI 调好。
+    运营训练 AI、研发支撑 AI、产品设计 AI——各司其职，一起把 AI 调好。
   </div>
 </section>
 
-<!-- CLOSING -->
 <div class="closing" id="closing">
   <div class="cin">
     <h2>不是 AI 替代人<br/><span>而是每个人都在学会管理 AI</span></h2>
-    <p class="csub" style="margin-bottom:2rem">感谢大家的时间，欢迎一起交流 👋</p>
+    <p class="csub" style="margin-bottom:3rem">感谢大家的时间，欢迎一起交流 👋</p>
     <div class="cau">hujiayi · 渠道产品组 · 2026</div>
   </div>
 </div>
