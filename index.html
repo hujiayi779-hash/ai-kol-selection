@@ -509,8 +509,6 @@
   <div class="card mb2" style="border-top:3px solid var(--accent)">
     <div class="ct" style="color:var(--accent)">核心问题① &nbsp;只能本地跑，还跑不稳——工程稳定性</div>
 
-    <p style="margin-bottom:1.2rem">后端核心解决的是稳定性问题。这条流程链很长——爬虫抓数据、AI 逐一分析、结果汇总输出，中间每个环节都可能出问题。不稳定的根源有两个：</p>
-
     <div style="display:flex;flex-direction:column;gap:.9rem;margin-bottom:1.4rem">
       <div style="background:var(--bg);border-radius:10px;padding:1rem 1.2rem;border-left:3px solid var(--accent)">
         <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">① 链路长，依赖多，一个节点出错整个任务都会挂</div>
@@ -531,11 +529,26 @@
   <div class="card mb2" style="border-top:3px solid var(--brand)">
     <div class="ct" style="color:var(--brand)">核心问题② &nbsp;能用，但太慢——时效性</div>
 
-    <p style="margin-bottom:1rem">模型默认的执行方式就是串行——一个任务干完，再干下一个。拿「分析达人近期作品」这个环节举例：100 个达人得排队等，一个一个来，1 分钟/个，100 个就是几十分钟，时效直接挂了。</p>
+    <p style="margin-bottom:1rem">慢背后有两层原因：</p>
 
-    <div style="font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.9rem">解法：subagent 并行</div>
+    <div style="display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.4rem">
+      <div style="background:var(--bg);border-radius:10px;padding:1rem 1.2rem;border-left:3px solid var(--brand)">
+        <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">串行效率低</div>
+        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">模型默认的执行方式就是串行——一个任务干完，再干下一个。拿「分析达人近期作品」这个环节举例：100 个达人得排队等，一个一个来，3 分钟/个，100 个就是三个多小时，时效直接挂了。</div>
+      </div>
+      <div style="background:var(--bg);border-radius:10px;padding:1rem 1.2rem;border-left:3px solid var(--brand)">
+        <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">数据有噪音</div>
+        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">爬回来的原始数据夹杂大量 HTML 标签、埋点字段，直接投喂浪费 token、干扰判断。</div>
+      </div>
+    </div>
 
-    <p style="font-size:.88rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.2rem">在 Skill 里明确要求它开多个 subagent 并行执行，同时处理 15 个达人——每个 subagent 独立负责一个达人，各自跑各自的，互不等待。效率一下子提升不少。</p>
+    <div style="font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.9rem">解法</div>
+
+    <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.2rem">
+      <div class="ii"><span class="sn">1</span><span><strong>subagent 并行：</strong>在 Skill 里明确要求它开多个 subagent 并行执行，同时处理多个达人，效率一下子提升不少。</span></div>
+      <div class="ii"><span class="sn">2</span><span><strong>并发控制：</strong>不是无限拉 subagent，控制并发数量，防止下游 API 挂掉。</span></div>
+      <div class="ii"><span class="sn">3</span><span><strong>数据清洗：</strong>投喂 AI 之前先过滤，只留有用的字段，上下文短、判断准、token 省。</span></div>
+    </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem">
       <div style="background:var(--red-light);border-radius:10px;padding:1rem">
