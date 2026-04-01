@@ -295,57 +295,86 @@
   <h2 class="ph">从 0 到落地，经历了三个阶段</h2>
   <p class="ps">每个阶段有一个核心命题，也踩了各自的坑。</p>
 
-  <div style="display:flex;flex-direction:column;gap:1rem">
+  <div style="display:flex;flex-direction:column;gap:.6rem">
+
+    <!-- 时间节点 02-04 -->
+    <div style="display:flex;align-items:center;gap:.8rem;padding:.5rem .2rem">
+      <div style="width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0"></div>
+      <div style="font-size:.78rem;color:var(--text-muted)"><strong style="color:var(--accent)">2026-02-04</strong> &nbsp;项目启动</div>
+    </div>
 
     <!-- 阶段一 -->
-    <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.6rem;box-shadow:var(--shadow);display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start">
-      <div style="background:var(--accent);color:white;border-radius:12px;padding:.6rem 1rem;font-size:.82rem;font-weight:800;text-align:center;min-width:64px;line-height:1.4">第一<br/>阶段</div>
-      <div>
-        <div style="font-size:.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem">0 → 1</div>
-        <div style="font-size:1rem;font-weight:800;margin-bottom:.5rem">写出第一个能跑的版本</div>
-        <div style="display:flex;flex-wrap:wrap;gap:.5rem">
-          <div style="background:var(--accent-light);color:var(--accent);border-radius:6px;padding:.25rem .7rem;font-size:.78rem;font-weight:600">产品框架怎么设计？</div>
-          <div style="background:var(--accent-light);color:var(--accent);border-radius:6px;padding:.25rem .7rem;font-size:.78rem;font-weight:600">框架有了，但AI不好好干活怎么办？</div>
-        </div>
+    <div style="background:var(--white);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:16px;padding:1.4rem 1.6rem;box-shadow:var(--shadow)">
+      <div style="display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin-bottom:.8rem">
+        <div style="background:var(--accent);color:white;border-radius:8px;padding:.3rem .8rem;font-size:.78rem;font-weight:800;white-space:nowrap">第一阶段</div>
+        <div style="font-size:.82rem;font-weight:700;color:var(--text-muted)">0 → 1</div>
+        <div style="font-size:1rem;font-weight:800">写出第一个能跑的版本</div>
       </div>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.7rem">
+        <span style="font-size:.72rem;color:var(--text-muted);font-weight:600;margin-right:.2rem">问题</span>
+        <div style="background:var(--accent-light);color:var(--accent);border-radius:6px;padding:.2rem .6rem;font-size:.76rem;font-weight:600">产品框架怎么设计？</div>
+        <div style="background:var(--accent-light);color:var(--accent);border-radius:6px;padding:.2rem .6rem;font-size:.76rem;font-weight:600">怎么让 AI 好好干活？</div>
+      </div>
+      <div style="font-size:.8rem;color:var(--text-muted);line-height:1.6">✅ 结果：能跑通了，但不稳定、效率不高</div>
     </div>
 
-    <!-- 连接箭头 -->
-    <div style="text-align:center;font-size:1.2rem;color:var(--text-muted);margin:-.2rem 0">↓</div>
+    <!-- 时间节点 02-24 -->
+    <div style="display:flex;align-items:center;gap:.8rem;padding:.4rem .2rem">
+      <div style="width:10px;height:10px;border-radius:50%;background:var(--text-muted);flex-shrink:0"></div>
+      <div style="font-size:.78rem;color:var(--text-muted)"><strong>2026-02-24</strong> &nbsp;跑通 Demo，端到端选达人链路初步打通</div>
+    </div>
+
+    <!-- 连接线 -->
+    <div style="text-align:center;font-size:1rem;color:var(--text-muted)">↓</div>
 
     <!-- 阶段二 -->
-    <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.6rem;box-shadow:var(--shadow);display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start">
-      <div style="background:var(--brand);color:white;border-radius:12px;padding:.6rem 1rem;font-size:.82rem;font-weight:800;text-align:center;min-width:64px;line-height:1.4">第二<br/>阶段</div>
-      <div>
-        <div style="font-size:.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem">实验品 → 线上工具</div>
-        <div style="font-size:1rem;font-weight:800;margin-bottom:.5rem">规模化：能跑通 ≠ 能用</div>
-        <div style="display:flex;flex-wrap:wrap;gap:.5rem">
-          <div style="background:var(--brand-light);color:var(--brand);border-radius:6px;padding:.25rem .7rem;font-size:.78rem;font-weight:600">工程稳定性</div>
-          <div style="background:var(--brand-light);color:var(--brand);border-radius:6px;padding:.25rem .7rem;font-size:.78rem;font-weight:600">时效性</div>
-        </div>
+    <div style="background:var(--white);border:1px solid var(--border);border-left:4px solid var(--brand);border-radius:16px;padding:1.4rem 1.6rem;box-shadow:var(--shadow)">
+      <div style="display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin-bottom:.8rem">
+        <div style="background:var(--brand);color:white;border-radius:8px;padding:.3rem .8rem;font-size:.78rem;font-weight:800;white-space:nowrap">第二阶段</div>
+        <div style="font-size:.82rem;font-weight:700;color:var(--text-muted)">规模化</div>
+        <div style="font-size:1rem;font-weight:800">从实验品到生产工具</div>
       </div>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.7rem">
+        <span style="font-size:.72rem;color:var(--text-muted);font-weight:600;margin-right:.2rem">问题</span>
+        <div style="background:var(--brand-light);color:var(--brand);border-radius:6px;padding:.2rem .6rem;font-size:.76rem;font-weight:600">工程稳定性</div>
+        <div style="background:var(--brand-light);color:var(--brand);border-radius:6px;padding:.2rem .6rem;font-size:.76rem;font-weight:600">时效性</div>
+      </div>
+      <div style="font-size:.8rem;color:var(--text-muted);line-height:1.6">✅ 结果：1小时处理100+达人，准确率68.8%、召回率78.6%，但仍不能上岗</div>
     </div>
 
-    <!-- 连接箭头 -->
-    <div style="text-align:center;font-size:1.2rem;color:var(--text-muted);margin:-.2rem 0">↓</div>
+    <!-- 时间节点 03-13 -->
+    <div style="display:flex;align-items:center;gap:.8rem;padding:.4rem .2rem">
+      <div style="width:10px;height:10px;border-radius:50%;background:var(--text-muted);flex-shrink:0"></div>
+      <div style="font-size:.78rem;color:var(--text-muted)"><strong>2026-03-13</strong> &nbsp;全链路串联完成，首轮规模化测试（126个达人，耗时45分钟，召回率40.28%，准确率61.04%）</div>
+    </div>
+
+    <!-- 时间节点 03-27 -->
+    <div style="display:flex;align-items:center;gap:.8rem;padding:.4rem .2rem">
+      <div style="width:10px;height:10px;border-radius:50%;background:var(--text-muted);flex-shrink:0"></div>
+      <div style="font-size:.78rem;color:var(--text-muted)"><strong>2026-03-27</strong> &nbsp;线上链路跑通，1小时内完成100个达人筛选，启动人机对比实验</div>
+    </div>
+
+    <!-- 连接线 -->
+    <div style="text-align:center;font-size:1rem;color:var(--text-muted)">↓</div>
 
     <!-- 阶段三 -->
-    <div style="background:var(--white);border:2px solid var(--green);border-radius:16px;padding:1.6rem;box-shadow:var(--shadow);display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start;position:relative">
+    <div style="background:var(--white);border:2px solid var(--green);border-left:4px solid var(--green);border-radius:16px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);position:relative">
       <div style="position:absolute;top:-10px;right:1.2rem;background:var(--green);color:white;border-radius:999px;padding:.2rem .8rem;font-size:.72rem;font-weight:700">📍 我们现在在这</div>
-      <div style="background:var(--green);color:white;border-radius:12px;padding:.6rem 1rem;font-size:.82rem;font-weight:800;text-align:center;min-width:64px;line-height:1.4">第三<br/>阶段</div>
-      <div>
-        <div style="font-size:.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem">进行中</div>
-        <div style="font-size:1rem;font-weight:800;margin-bottom:.5rem">效果验证：能跑 ≠ 够好，能不能放心推全？</div>
-        <div style="display:flex;flex-wrap:wrap;gap:.5rem">
-          <div style="background:var(--green-light);color:var(--green);border-radius:6px;padding:.25rem .7rem;font-size:.78rem;font-weight:600">编教材：让运营经验流出来</div>
-          <div style="background:var(--green-light);color:var(--green);border-radius:6px;padding:.25rem .7rem;font-size:.78rem;font-weight:600">教学生：给逻辑不只给规则</div>
-          <div style="background:var(--green-light);color:var(--green);border-radius:6px;padding:.25rem .7rem;font-size:.78rem;font-weight:600">随堂考：人机实验验效果</div>
-          <div style="background:var(--yellow-light);color:var(--yellow);border-radius:6px;padding:.25rem .7rem;font-size:.78rem;font-weight:600">⚠️ 友好型框架还在路上</div>
-        </div>
+      <div style="display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin-bottom:.8rem">
+        <div style="background:var(--green);color:white;border-radius:8px;padding:.3rem .8rem;font-size:.78rem;font-weight:800;white-space:nowrap">第三阶段</div>
+        <div style="font-size:.82rem;font-weight:700;color:var(--text-muted)">进行中</div>
+        <div style="font-size:1rem;font-weight:800">让员工真正达标上岗</div>
       </div>
+      <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.7rem">
+        <span style="font-size:.72rem;color:var(--text-muted);font-weight:600;margin-right:.2rem">在做</span>
+        <div style="background:var(--green-light);color:var(--green);border-radius:6px;padding:.2rem .6rem;font-size:.76rem;font-weight:600">编教材</div>
+        <div style="background:var(--green-light);color:var(--green);border-radius:6px;padding:.2rem .6rem;font-size:.76rem;font-weight:600">教学生</div>
+        <div style="background:var(--green-light);color:var(--green);border-radius:6px;padding:.2rem .6rem;font-size:.76rem;font-weight:600">随堂考</div>
+      </div>
+      <div style="font-size:.8rem;color:var(--text-muted);line-height:1.6">⚠️ 待解决：效果不达标（准确率&lt;70%，筛选理由误打误撞）+ 跨业务能力不够</div>
     </div>
 
-  </div>
+    </div>
 </section>
 
 <div class="divider"></div>
