@@ -495,24 +495,28 @@
 <section id="scale">
   <div class="ptag">第二阶段</div>
   <h2 class="ph">从实验品到生产工具</h2>
-  <p class="ps">第一阶段有了一个能跑的版本，但它是实验品——本地运行、手动触发、不稳定也行。真正的业务要求不一样：一个项目 150-200 个达人、有时效性、要稳定在线上跑。实验品和生产工具之间，有两道坎。</p>
+  <p class="ps">第一阶段有了一个能跑的版本，但它是实验品——只能本地手动触发，跑不稳也勉强能用。要真正落地业务，得跨过两道坎：稳定性和时效性。</p>
 
   <!-- 核心问题① 工程稳定性 -->
   <div class="card mb2" style="border-top:3px solid var(--accent)">
     <div class="ct" style="color:var(--accent)">核心问题① &nbsp;只能本地跑，还跑不稳——工程稳定性</div>
 
-    <p style="margin-bottom:1.2rem">第一阶段的链路是「裸跑」——只能在本地手动触发，无法上线，也不稳定。</p>
+    <p style="margin-bottom:1.2rem">后端核心解决的是稳定性问题。这条流程链很长——爬虫抓数据、AI 逐一分析、结果汇总输出，中间每个环节都可能出问题。不稳定的根源有两个：</p>
 
-    <p style="margin-bottom:1rem"><strong>怎么解？给 AI 员工造了一个「办公室」。</strong></p>
-
-    <div style="display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.4rem">
-      <div class="ii">🏢 <span>每个员工住在自己的<strong>沙箱</strong>里：独立空间，隔离、可控，互不干扰</span></div>
-      <div class="ii">🏗 <span>研发搭的<strong>大楼框架</strong>负责把这些办公室建起来、管好：开机、配置、出问题了自动重启，员工不用操心自己住的地方是不是稳的</span></div>
-      <div class="ii">📟 <span><strong>传呼机</strong>是唯一的通讯口：外面的任务通过它发进来，员工收到就干活，干完结果再传出去</span></div>
-      <div class="ii">🤖 <span>员工本体是 <strong>OpenClaw</strong>，带着自己的技能库（Skill 是完整工作流，Tool 是原子工具），在办公室里一单一单地完成达人筛选任务</span></div>
+    <div style="display:flex;flex-direction:column;gap:.9rem;margin-bottom:1.4rem">
+      <div style="background:var(--bg);border-radius:10px;padding:1rem 1.2rem;border-left:3px solid var(--accent)">
+        <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">① 链路长，依赖多，一个节点出错整个任务都会挂</div>
+        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">解法：任务级隔离 + 自动重试——某个达人处理失败，只重跑它，其余不受影响。</div>
+      </div>
+      <div style="background:var(--bg);border-radius:10px;padding:1rem 1.2rem;border-left:3px solid var(--accent)">
+        <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">② 数据量大，容易撑爆</div>
+        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">解法：数据先存到「云盘」、只在链路中传递地址，内存压力大幅降低。</div>
+      </div>
     </div>
 
-    <div class="ins">💡 <span><strong>更重要的是：这套大楼框架是可复用的。</strong> 下次再来一个新的 AI 员工，直接搬进来住就行，不用重新打地基。这是研发这个阶段真正沉淀下来的东西。</span></div>
+    <p style="font-size:.88rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.2rem">两个问题解完，整条链路才真正在线上稳定运行。</p>
+
+    <div class="ins">💡 <span><strong>更值得一提的是：这是团队第一次把业务系统和 AI 框架串联落地，没有任何现成模板。</strong>跑通之后，代码结构和配置方式都沉淀下来了——后续再上线新的 AI 能力，框架直接复用，不用再从零开始打地基。</span></div>
   </div>
 
   <!-- 核心问题② 时效性 -->
