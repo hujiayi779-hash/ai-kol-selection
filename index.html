@@ -434,30 +434,12 @@
 
     <p style="margin-bottom:1.2rem;font-size:.88rem;color:var(--text-muted);line-height:1.7">根本原因：<strong>AI 的注意力是有限资源</strong>。任务越堆越多，上下文越来越长，AI 自然开始划水。</p>
 
-    <div style="font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem">解法：引入主 Agent + 职责分离</div>
+    <div style="font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.9rem">解法：引入主 Agent + 职责分离</div>
 
-    <!-- 解法第一步 -->
-    <div style="display:flex;gap:.8rem;align-items:flex-start;margin-bottom:1rem">
-      <div style="background:var(--accent);color:white;border-radius:999px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0;margin-top:.15rem">1</div>
-      <div>
-        <div style="font-size:.88rem;font-weight:700;margin-bottom:.3rem">引入主 Agent 这个角色</div>
-        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">之前没有主 Agent，只是在一个进程里顺序跑 Skill。现在专门创建了一个主 Agent，只负责编排任务、监督执行、整合结果——它不干具体活，只管「这件事有没有按要求做好」。</div>
-      </div>
-    </div>
-
-    <!-- 解法第二步 -->
-    <div style="display:flex;gap:.8rem;align-items:flex-start;margin-bottom:1.4rem">
-      <div style="background:var(--accent);color:white;border-radius:999px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0;margin-top:.15rem">2</div>
-      <div>
-        <div style="font-size:.88rem;font-weight:700;margin-bottom:.3rem">执行任务时，各开独立进程 / 调用 Tool</div>
-        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">主 Agent 把每个任务分发出去：需要理解和判断的，开独立进程调用对应 Skill；不需要理解的，直接调用 Tool。每个进程只做一件事，做完把结论交回主 Agent。</div>
-      </div>
-    </div>
+    <p style="font-size:.88rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.4rem">专门创建了一个主 Agent，只负责一件事：编排任务、监督执行、整合结果。它不干具体活，不感知执行细节，只管「这件事有没有按要求做好」。<br/>具体执行全部外包出去——每个任务开一个独立进程、调用对应的 Skill 单独跑，只做一件事，做完把结论交回来。上下文干净、职责单一，质量自然就上来了。</p>
 
     <div class="arch">
-      <div class="al bad">❌ 之前：一个进程顺序执行 4 个任务</div>
-      <div class="as">整合规则 → 获取数据 → 理解内容 → 综合判断 → 自检<br/><small>上下文越来越长，执行和自检都在走过场</small></div>
-      <div class="al good">✅ 改进后：主 Agent 编排调度，各任务独立执行</div>
+      <div class="al good">主 Agent 编排调度，各任务独立执行</div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem">
         <div class="am" style="width:100%;text-align:center">🎯 主 Agent（编排任务 · 监督执行 · 整合结果）</div>
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;width:100%">
