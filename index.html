@@ -519,11 +519,11 @@
   <div class="card mb2" style="border-top:3px solid var(--brand)">
     <div class="ct" style="color:var(--brand)">核心问题② &nbsp;能用，但太慢——时效性</div>
 
-    <p style="margin-bottom:1rem">上线了，然后发现：慢得根本用不了。</p>
+    <p style="margin-bottom:1rem">模型默认的执行方式就是串行——一个任务干完，再干下一个。拿「分析达人近期作品」这个环节举例：100 个达人得排队等，一个一个来，1 分钟/个，100 个就是几十分钟，时效直接挂了。</p>
 
-    <p style="margin-bottom:1rem">根本原因：<strong>模型默认的执行方式就是串行</strong>——一个任务干完，再干下一个。就算让它「同时处理多个达人」，它实际上还是一个一个来。</p>
+    <div style="font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.9rem">解法：subagent 并行</div>
 
-    <p style="margin-bottom:1.4rem">拿「分析达人近期作品」这个环节举例：100 个达人得排队等，一个一个来，1 分钟/个，100 个就是几十分钟，时效直接挂了。</p>
+    <p style="font-size:.88rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.2rem">在 Skill 里明确要求它开多个 subagent 并行执行，同时处理 15 个达人——每个 subagent 独立负责一个达人，各自跑各自的，互不等待。效率一下子提升不少。</p>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem">
       <div style="background:var(--red-light);border-radius:10px;padding:1rem">
@@ -548,7 +548,7 @@
       </div>
     </div>
 
-    <div class="ins">💡 <span>在 Skill 里明确要求它开多个 subagent 并行执行，同时处理 15 个达人——每个 subagent 独立负责一个达人，各自跑各自的，互不等待。效率一下子提升不少。</span></div>
+    <div class="ins">💡 <span><strong>认知升级：AI 不会自己想到并行，要你告诉它。</strong> 模型天然是串行的，并行需要在 Skill 里显式要求——这是工程设计，不是 AI 自发的能力。</span></div>
   </div>
 
   <!-- 阶段成果数据 -->
