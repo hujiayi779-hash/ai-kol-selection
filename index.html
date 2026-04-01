@@ -521,13 +521,13 @@
 
     <p style="margin-bottom:1rem">上线了，然后发现：慢得根本用不了。</p>
 
-    <p style="margin-bottom:1rem">问题出在组织结构上。最初的配置是 1 个正职员工（主 Agent）带 4 个外包（子 Agent），每个外包负责处理一个达人。听起来合理，但瓶颈很快就暴露了——外包就那么几个，达人数量一多，只能排队，一个接一个地处理。</p>
+    <p style="margin-bottom:1rem">根本原因：<strong>模型默认的执行方式就是串行</strong>——一个任务干完，再干下一个。就算让它「同时处理多个达人」，它实际上还是一个一个来。</p>
 
-    <p style="margin-bottom:1.4rem">拿「分析达人近期作品」这个环节举例：100 个达人得排队等，一个一个来，一个达人 1 分钟，100 个就是几十分钟，时效直接挂了。</p>
+    <p style="margin-bottom:1.4rem">拿「分析达人近期作品」这个环节举例：100 个达人得排队等，一个一个来，1 分钟/个，100 个就是几十分钟，时效直接挂了。</p>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem">
       <div style="background:var(--red-light);border-radius:10px;padding:1rem">
-        <div style="font-size:.75rem;font-weight:700;color:var(--red);margin-bottom:.6rem">❌ 之前：串行排队</div>
+        <div style="font-size:.75rem;font-weight:700;color:var(--red);margin-bottom:.6rem">❌ 之前：模型默认串行</div>
         <div style="display:flex;align-items:center;gap:.3rem;flex-wrap:wrap;margin-bottom:.5rem">
           <div style="background:white;border:1px solid #FECACA;border-radius:6px;padding:.3rem .5rem;font-size:.75rem">达人①</div>
           <div style="font-size:.8rem;color:var(--red)">→</div>
@@ -535,20 +535,20 @@
           <div style="font-size:.8rem;color:var(--red)">→</div>
           <div style="background:white;border:1px solid #FECACA;border-radius:6px;padding:.3rem .5rem;font-size:.75rem">达人③…</div>
         </div>
-        <div style="font-size:.75rem;color:var(--text-muted)">1 个外包干，一个一个等</div>
+        <div style="font-size:.75rem;color:var(--text-muted)">一个一个排队等，效率极低</div>
       </div>
       <div style="background:var(--green-light);border-radius:10px;padding:1rem">
-        <div style="font-size:.75rem;font-weight:700;color:var(--green);margin-bottom:.6rem">✅ 改进后：外包团队扩编</div>
+        <div style="font-size:.75rem;font-weight:700;color:var(--green);margin-bottom:.6rem">✅ 改进后：Skill 里要求开多个 subagent 并行跑</div>
         <div style="display:flex;flex-direction:column;gap:.25rem;margin-bottom:.5rem">
-          <div style="background:white;border:1px solid #A7F3D0;border-radius:6px;padding:.3rem .6rem;font-size:.75rem;display:flex;align-items:center;gap:.4rem"><span style="color:var(--green)">●</span> 外包① → 达人A</div>
-          <div style="background:white;border:1px solid #A7F3D0;border-radius:6px;padding:.3rem .6rem;font-size:.75rem;display:flex;align-items:center;gap:.4rem"><span style="color:var(--green)">●</span> 外包② → 达人B</div>
-          <div style="background:white;border:1px solid #A7F3D0;border-radius:6px;padding:.3rem .6rem;font-size:.75rem;display:flex;align-items:center;gap:.4rem"><span style="color:var(--green)">●</span> 外包③ → 达人C…</div>
+          <div style="background:white;border:1px solid #A7F3D0;border-radius:6px;padding:.3rem .6rem;font-size:.75rem;display:flex;align-items:center;gap:.4rem"><span style="color:var(--green)">●</span> subagent① → 达人A</div>
+          <div style="background:white;border:1px solid #A7F3D0;border-radius:6px;padding:.3rem .6rem;font-size:.75rem;display:flex;align-items:center;gap:.4rem"><span style="color:var(--green)">●</span> subagent② → 达人B</div>
+          <div style="background:white;border:1px solid #A7F3D0;border-radius:6px;padding:.3rem .6rem;font-size:.75rem;display:flex;align-items:center;gap:.4rem"><span style="color:var(--green)">●</span> subagent③ → 达人C…</div>
         </div>
-        <div style="font-size:.75rem;color:var(--text-muted)">15 个外包同时干</div>
+        <div style="font-size:.75rem;color:var(--text-muted)">15 个 subagent 同时干，互不等待</div>
       </div>
     </div>
 
-    <div class="ins">💡 <span>把并行子 Agent 从 4 个扩到十几个，相当于从 1 个外包干这件事，变成 15 个同时干。同样 100 个达人，时效从「不可用」变成「可用」。</span></div>
+    <div class="ins">💡 <span>在 Skill 里明确要求它开多个 subagent 并行执行，同时处理 15 个达人——每个 subagent 独立负责一个达人，各自跑各自的，互不等待。效率一下子提升不少。</span></div>
   </div>
 
   <!-- 阶段成果数据 -->
