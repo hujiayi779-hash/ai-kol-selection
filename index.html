@@ -552,7 +552,7 @@
   </div>
 
   <!-- 阶段成果数据 -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:.5rem">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:.5rem;margin-bottom:1.5rem">
     <div class="mt" style="border:1.5px solid #A7F3D0">
       <div class="mn" style="color:var(--green)">100+</div>
       <div class="md">单批覆盖达人数</div>
@@ -561,6 +561,31 @@
       <div class="mn" style="color:var(--green)">&lt; 1小时</div>
       <div class="md">单次筛选时长</div>
     </div>
+    <div class="mt" style="border:1.5px solid #A7F3D0">
+      <div class="mn" style="color:var(--green)">68.8%</div>
+      <div class="md">准确率</div>
+    </div>
+    <div class="mt" style="border:1.5px solid #A7F3D0">
+      <div class="mn" style="color:var(--green)">78.6%</div>
+      <div class="md">召回率</div>
+    </div>
+  </div>
+
+  <!-- 第二阶段遗留问题 -->
+  <div class="card" style="border-top:3px solid var(--red);background:var(--red-light)">
+    <div class="ct" style="color:var(--red)">⚠️ 工程问题解了，但仍然不能上岗</div>
+    <p style="margin-bottom:1rem;font-size:.9rem;color:var(--text-muted)">稳定性有了，速度也够了，但上线跑了一段时间后发现：效果和覆盖面都还差一截。</p>
+    <div style="display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.2rem">
+      <div style="background:white;border-radius:10px;padding:1rem 1.2rem;border-left:3px solid var(--red)">
+        <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">① 效果不达标</div>
+        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">准确率不到 70%，且 AI 给出的很多筛选理由不可用——不是真的「看懂了再选」，更像是误打误撞。</div>
+      </div>
+      <div style="background:white;border-radius:10px;padding:1rem 1.2rem;border-left:3px solid var(--red)">
+        <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">② 跨业务能力不够</div>
+        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">现在只能给个别业务选号，换个业务就得重来，无法复用。</div>
+      </div>
+    </div>
+    <div style="font-size:.85rem;color:var(--red);font-weight:600">这两道坎，就是第三阶段要解决的事。</div>
   </div>
 
 </section>
