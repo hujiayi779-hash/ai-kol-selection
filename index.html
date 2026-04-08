@@ -234,14 +234,9 @@
     </div>
     <div style="font-size:.82rem;color:var(--text-muted);margin-bottom:1.2rem">一个项目 150–200 个达人，每人都要过一遍——信息量大、耗时长、容易漏判。</div>
     <div style="display:flex;flex-direction:column;gap:.6rem">
-      <a href="https://pgy.xiaohongshu.com/solar/pre-trade/blogger-detail/5c7f5d700000000016005d6d" target="_blank" style="display:flex;align-items:center;gap:.6rem;padding:.8rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);font-size:.85rem;transition:border-color .2s">
+      <a href="https://pgy.xiaohongshu.com/solar/pre-trade/blogger-detail/5fe9bdc800000000010014a9" target="_blank" style="display:flex;align-items:center;gap:.6rem;padding:.8rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);font-size:.85rem;transition:border-color .2s">
         <span style="font-size:1.2rem">🔗</span>
-        <span>蒲公英达人案例 ①</span>
-        <span style="margin-left:auto;font-size:.78rem;color:var(--text-muted)">pgy.xiaohongshu.com →</span>
-      </a>
-      <a href="https://pgy.xiaohongshu.com/solar/pre-trade/blogger-detail/61e002f2000000001000bb54" target="_blank" style="display:flex;align-items:center;gap:.6rem;padding:.8rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);font-size:.85rem;transition:border-color .2s">
-        <span style="font-size:1.2rem">🔗</span>
-        <span>蒲公英达人案例 ②</span>
+        <span>蒲公英达人案例</span>
         <span style="margin-left:auto;font-size:.78rem;color:var(--text-muted)">pgy.xiaohongshu.com →</span>
       </a>
     </div>
@@ -365,7 +360,7 @@
     <p style="margin-bottom:1.2rem">面对「筛选达人」这个目标，框架要回答两个问题：<strong>目标怎么拆？每个小任务怎么完成？</strong></p>
 
     <!-- 第一层：任务拆分 -->
-    <div style="font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.8rem">第一步：目标怎么拆？</div>
+    <div style="font-size:.8rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.8rem">第一步：目标怎么拆？</div>
     <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:.9rem;line-height:1.7">这个框架不是一开始就设计好的——而是先给 AI 描述了「选达人是什么、输入是什么」，让它自己尝试着去选。发现它跑出来的执行流程，和运营的实际作业逻辑高度吻合，于是就沿用了这个结构，自然拆出 4 个小任务：</p>
     <div class="fw" style="margin-bottom:1.4rem">
       <div class="flow">
@@ -380,7 +375,7 @@
     </div>
 
     <!-- 第二层：每步谁来做 -->
-    <div style="font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.8rem">第二步：每个小任务怎么完成？</div>
+    <div style="font-size:.8rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.8rem">第二步：每个小任务怎么完成？</div>
     <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:.9rem;line-height:1.7">通常有两种手段：</p>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem">
@@ -436,7 +431,7 @@
 
     <p style="margin-bottom:1.2rem;font-size:.88rem;color:var(--text-muted);line-height:1.7">根本原因：<strong>AI 的注意力是有限资源</strong>。任务越堆越多，上下文越来越长，AI 自然开始划水。</p>
 
-    <div style="font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.9rem">解法：引入主 Agent + 职责分离</div>
+    <div style="font-size:.8rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.9rem">解法：引入主 Agent + 职责分离</div>
 
     <p style="font-size:.88rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.4rem">专门创建了一个主 Agent，只负责一件事：编排任务、监督执行、整合结果。它不干具体活，不感知执行细节，只管「这件事有没有按要求做好」。<br/>具体执行全部外包出去——每个任务开一个独立进程、调用对应的 Skill 单独跑，只做一件事，做完把结论交回来。上下文干净、职责单一，质量自然就上来了。</p>
 
@@ -536,7 +531,7 @@
       </div>
     </div>
 
-    <div style="font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.9rem">解法</div>
+    <div style="font-size:.8rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.9rem">解法</div>
 
     <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.2rem">
       <div class="ii"><span class="sn">1</span><span><strong>subagent 并行：</strong>在 Skill 里明确要求它开多个 subagent 并行执行，同时处理多个达人，效率一下子提升不少。</span></div>
@@ -582,7 +577,8 @@
     </div>
     <div class="mt" style="border:1.5px solid #A7F3D0">
       <div class="mn" style="color:var(--green)">68.8%</div>
-      <div class="md">准确率</div>
+      <div class="md">准确率（阶段基准）</div>
+      <div style="font-size:.72rem;color:var(--text-muted);margin-top:.3rem;line-height:1.5">以人工筛选结果为参照，当前阶段目标：≥80%</div>
     </div>
     <div class="mt" style="border:1.5px solid #A7F3D0">
       <div class="mn" style="color:var(--green)">78.6%</div>
@@ -597,7 +593,7 @@
     <div style="display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.2rem">
       <div style="background:white;border-radius:10px;padding:1rem 1.2rem;border-left:3px solid var(--red)">
         <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">① 效果不达标</div>
-        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">准确率不到 70%，且 AI 给出的很多筛选理由不可用——不是真的「看懂了再选」，更像是误打误撞。</div>
+        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">以人工为参照，当前准确率 68.8%，尚未达到目标水位（80%）。<strong>准确率并非越高越好——人本身也不是标准答案</strong>，80% 是当前阶段以人工结果为参照的对齐基准，后续会根据人机对比实验结果持续校准。此外，AI 给出的很多筛选理由不可用——不是真的「看懂了再选」，更像是误打误撞。</div>
       </div>
       <div style="background:white;border-radius:10px;padding:1rem 1.2rem;border-left:3px solid var(--red)">
         <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">② 跨业务能力不够</div>
@@ -687,7 +683,7 @@
       </div>
     </div>
 
-    <div style="font-size:.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.8rem">这个阶段沉淀出的两条认知</div>
+    <div style="font-size:.8rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.8rem">这个阶段沉淀出的两条认知</div>
     <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.2rem">
       <div class="ii"><span class="sn" style="background:var(--purple)">1</span><span>多业务通用性的关键：框架层通用，个性化知识沉淀在知识库，按业务调用</span></div>
       <div class="ii"><span class="sn" style="background:var(--purple)">2</span><span>友好型框架是核心攻坚方向——不解决这个，调优永远依赖研发，规模化推全无从谈起</span></div>
@@ -696,15 +692,96 @@
     <div class="ins" style="background:var(--purple-light);border-color:#DDD6FE">💡 <span style="color:var(--purple)"><strong>当前进度：还在路上。</strong> 这是第三阶段研发最重要的攻坚方向，也是整个项目推全的关键前提。</span></div>
   </div>
 
+
+  <!-- 当前进度 -->
+  <div class="card mb2" style="border-top:3px solid var(--green);background:var(--green-light)">
+    <div class="ct" style="color:var(--green)">📍 当前进度：人机对比实验 + 历史项目复跑验证，同步推进中</div>
+
+    <div style="font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:.6rem">一、人机对比实验</div>
+    <div style="font-size:.78rem;font-weight:600;color:var(--text-muted);margin-bottom:.5rem;padding-left:.2rem">实验目标——回答三个核心问题</div>
+    <div style="display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.1rem">
+      <div class="ii"><span class="sn" style="background:var(--green)">1</span><span>AI 选号的<strong>效率和稳定性</strong>怎么样？</span></div>
+      <div class="ii"><span class="sn" style="background:var(--green)">2</span><span>AI 选出来的达人，<strong>投出去效果</strong>怎么样？和人工选的相比，核心指标有没有显著差距？</span></div>
+      <div class="ii"><span class="sn" style="background:var(--green)">3</span><span>AI 的<strong>能力边界</strong>在哪里？哪类达人 AI 判断准，哪类容易出问题？</span></div>
+    </div>
+
+    <div style="font-size:.78rem;font-weight:600;color:var(--text-muted);margin-bottom:.5rem;padding-left:.2rem">效果回收：共 4 轮</div>
+    <div style="display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.4rem">
+      <div style="background:var(--yellow-light);border-radius:10px;padding:.8rem 1rem;border-left:3px solid var(--yellow)">
+        <div style="font-size:.83rem;font-weight:700;margin-bottom:.3rem">🔄 第 1 轮（进行中）</div>
+        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">筛选结束后，运营对 AI 选号结果进行回溯盲测评审。目前已完成打分，并沉淀出人工评审打分规则；后续将输出人工筛选一致结果，与 AI 选号结果逐一对比，得出人机一致率及 AI 筛选理由合理性。</div>
+      </div>
+      <div style="background:white;border-radius:10px;padding:.8rem 1rem;border-left:3px solid var(--border)">
+        <div style="font-size:.83rem;font-weight:700;margin-bottom:.3rem">📅 第 2 轮 · 4月13日</div>
+        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">投放启动期结束，初步判断 AI 组 vs 人工组达人发布质量。</div>
+      </div>
+      <div style="background:white;border-radius:10px;padding:.8rem 1rem;border-left:3px solid var(--border)">
+        <div style="font-size:.83rem;font-weight:700;margin-bottom:.3rem">📅 第 3 轮 · 4月17日</div>
+        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">投放优化期结束，看哪些笔记跑不出去，反推选达人质量。</div>
+      </div>
+      <div style="background:white;border-radius:10px;padding:.8rem 1rem;border-left:3px solid var(--border)">
+        <div style="font-size:.83rem;font-weight:700;margin-bottom:.3rem">📅 第 4 轮 · 4月19日</div>
+        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">投放放量期结束，完整回收投放数据，全面对比 AI 组 vs 人工组效果。</div>
+      </div>
+    </div>
+
+    <div style="font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:.6rem">二、历史项目复跑验证</div>
+    <div style="font-size:.88rem;color:var(--text-muted);line-height:1.8">选取近期已执行完的 6 个历史项目，让 AI 重跑选号并与人工结果对比。验证 AI 选号能力在不同业务的泛化性，同时作为第一次规则调优的输入。</div>
+  </div>
+
 </section>
 
-<!-- CLOSING -->
-<div class="closing" id="closing">
-  <div class="cin">
-    <h2>不是 AI 替代人<br/><span>而是每个人都在学会管理 AI</span></h2>
-    <p class="csub" style="margin-bottom:3rem">感谢大家的时间，欢迎一起交流 👋</p>
-    <div class="cau">hujiayi · 渠道产品组 · 2026</div>
+<!-- 人机协作 -->
+<section class="sec" id="collab">
+  <h2 class="ph">不是 AI 替代人，而是每个人都在学会管理 AI</h2>
+
+  <div class="card mb2">
+    <p style="font-size:.92rem;color:var(--text-muted);line-height:1.8;margin-bottom:0">研发提供了底层能力支持，让这套系统得以运转。但这个 AI 员工能不能真正上岗、能不能选好达人，靠的是人的经验输入和判断——这是整套系统最核心、最不可替代的部分。</p>
   </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem;align-items:stretch">
+    <!-- 产品 -->
+    <div class="card" style="border-top:3px solid var(--accent);margin-bottom:0;display:flex;flex-direction:column">
+      <div class="ct" style="color:var(--accent);font-size:1.05rem">产品</div>
+      <div style="display:flex;flex-direction:column;gap:1.1rem;flex:1">
+        <div>
+          <div style="font-size:.85rem;font-weight:700;margin-bottom:.35rem;color:var(--text)">🔧 搭建系统</div>
+          <div style="font-size:.83rem;color:var(--text-muted);line-height:1.75">AI 员工从无到有，整个产品搭建过程由产品主导。</div>
+        </div>
+        <div>
+          <div style="font-size:.85rem;font-weight:700;margin-bottom:.35rem;color:var(--text)">📐 设计方法论</div>
+          <div style="font-size:.83rem;color:var(--text-muted);line-height:1.75">「培训-考试」这套让 AI 持续学习调优的机制，是产品设计的。</div>
+        </div>
+        <div>
+          <div style="font-size:.85rem;font-weight:700;margin-bottom:.35rem;color:var(--text)">🔄 经验转化</div>
+          <div style="font-size:.83rem;color:var(--text-muted);line-height:1.75">把运营的判断标准翻译成 AI 能执行的语言——这个转化，是整套系统能运转的关键。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 运营 -->
+    <div class="card" style="border-top:3px solid var(--brand);margin-bottom:0;display:flex;flex-direction:column">
+      <div class="ct" style="color:var(--brand);font-size:1.05rem">运营</div>
+      <div style="display:flex;flex-direction:column;gap:1.1rem;flex:1">
+        <div>
+          <div style="font-size:.85rem;font-weight:700;margin-bottom:.35rem;color:var(--text)">🧠 经验输入</div>
+          <div style="font-size:.83rem;color:var(--text-muted);line-height:1.75">AI 不知道什么样的达人算好——这个判断只存在于运营脑子里。第一阶段手把手带产品入门，第三阶段一起沉淀标准化打分表，这些都是在把经验变成 AI 的原材料。</div>
+        </div>
+        <div>
+          <div style="font-size:.85rem;font-weight:700;margin-bottom:.35rem;color:var(--text)">⚖️ 结果裁判</div>
+          <div style="font-size:.83rem;color:var(--text-muted);line-height:1.75">AI 交出选号结果，行不行由运营来判。这个角色不会消失，只会越来越重要。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ins" style="background:var(--accent-light);border-color:#C7D2FE">💡 <span style="color:var(--accent)"><strong>人在培训 AI，人在管理 AI。</strong> 产运共同协作，把藏在运营脑子里的经验和判断，提炼成标准化的教材，再通过这套培训机制传递给 AI。这不是 AI 在自动学习，是人在主动培训一个员工、持续管理它的能力边界。未来，也期待有更多运营同学加入进来，成为 AI 的训练师。</span></div>
+</section>
+
+
+<div style="text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);margin-top:1rem">
+  <div style="font-size:.85rem;color:var(--text-muted)">hujiayi · 渠道产品组 · 2026</div>
+  <div style="font-size:.78rem;color:var(--border);margin-top:.4rem">欢迎一起交流 👋</div>
 </div>
 
 <script>
