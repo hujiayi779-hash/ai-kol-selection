@@ -593,7 +593,13 @@
     <div style="display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.2rem">
       <div style="background:white;border-radius:10px;padding:1rem 1.2rem;border-left:3px solid var(--red)">
         <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">① 效果不达标</div>
-        <div style="font-size:.82rem;color:var(--text-muted);line-height:1.7">以人工为参照，当前准确率 68.8%，尚未达到目标水位（80%）。<strong>准确率并非越高越好——人本身也不是标准答案</strong>，80% 是当前阶段以人工结果为参照的对齐基准，后续会根据人机对比实验结果持续校准。此外，AI 给出的很多筛选理由不可用——不是真的「看懂了再选」，更像是误打误撞。</div>
+        <div style="display:flex;flex-direction:column;gap:.5rem;font-size:.82rem;color:var(--text-muted);line-height:1.7">
+          <div>当前准确率 <strong>68.8%</strong>，尚未达到目标水位（80%）。</div>
+          <div style="padding-left:.8rem;border-left:2px solid #FECACA">
+            <strong>注：准确率并非越高越好</strong>——人本身也不是标准答案。80% 是以人工结果为参照的阶段性对齐基准，后续会随人机对比实验结果持续校准。
+          </div>
+          <div>AI 给出的很多<strong>筛选理由不可用</strong>——不是真的「看懂了再选」，更像是误打误撞。</div>
+        </div>
       </div>
       <div style="background:white;border-radius:10px;padding:1rem 1.2rem;border-left:3px solid var(--red)">
         <div style="font-size:.85rem;font-weight:700;margin-bottom:.4rem">② 跨业务能力不够</div>
